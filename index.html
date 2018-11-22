@@ -1,14 +1,32 @@
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html>
 <head>
-    <title>Ahmad Elmasri | Software Engineer in Progress</title>
+<meta charset="utf-8">
+<meta content="stuff, to, help, search, engines, not" name="keywords">
+<meta content="What this page is about." name="description">
+<meta content="Display Webcam Stream" name="title">
+<title>Display Webcam Stream</title>
+<link rel = "stylesheet" href = "css-files/video-display.css">
 </head>
-
+  
 <body>
-  <script>
-    window.location.replace("/home/index.html");
-  </script>
+<div id="container">
+    <video autoplay="true" id="videoElement">
+     
+    </video>
+</div>
+<script>
+ var video = document.querySelector("#videoElement");
+ 
+ if (navigator.mediaDevices.getUserMedia) {       
+     navigator.mediaDevices.getUserMedia({video: true})
+   .then(function(stream) {
+     video.srcObject = stream;
+   })
+   .catch(function(err0r) {
+     console.log("Something went wrong! Meh");
+   });
+ }
+</script>
 </body>
-
 </html>
