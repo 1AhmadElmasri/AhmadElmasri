@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="stuff, to, help, search, engines, not" name="keywords">
+<meta content="This is a personal website or professional use" name="description">
+<meta content="Display Webcam Stream" name="title">
+<title>Ahmad Elmasri | Software Engineer in Progress</title>
+<link rel = "stylesheet" href = "/css-files/navbar.css">
+<link rel = "stylesheet" href = "css-files/video-display.css">
+</head>
+  
+<body>
+<h1>Ahmad Elmasri</h1>
+<div id="container">
+    <video autoplay="true" id="videoElement">
+     
+    </video>
+</div>
+
+
+
+
+<script>
+ var video = document.querySelector("#videoElement");
+ 
+ if (navigator.mediaDevices.getUserMedia) {       
+     navigator.mediaDevices.getUserMedia({video: true})
+   .then(function(stream) {
+     video.srcObject = stream;
+   })
+   .catch(function(err0r) {
+     console.log("Something went wrong! Meh");
+   });
+ }
+</script>
+</body>
+</html>
