@@ -4,7 +4,7 @@
     background-position: 0px;
     margin: 0px;
     width: 101.5%;
-    height: 200px;
+    height: 20%;
     overflow: hidden;
     margin: -15px;
     top: 5px;
@@ -130,17 +130,18 @@
 #three-bars{
     position: absolute;
     left: 90%;
-    top: 25%;
+    top: 12%;
     height: 40%;
     visibility: hidden;
     opacity: 0;
-    transition-duration: 1.5s;
+    transition-duration: 0.5s;
     
 }
 
 #three-bars:hover{
     cursor:pointer;
-    
+    -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 @media only screen and (max-width: 1024px) {
@@ -152,6 +153,11 @@
     #three-bars{
         visibility: visible;
         opacity: 1;
+    }
+
+    #three-bars:hover{
+        cursor:pointer;
+        transform: rotate(20);
     }
     
 }

@@ -1,0 +1,44 @@
+.small-screen-nav{
+    display: block;
+    margin-left: 91%;
+    visibility: hidden;
+    width: 20%;
+    height: 80%;
+    background-color: rgb(240,240,240);
+}
+
+.small-screen-nav:hover{
+    visibility: visible;
+}
+
+.small-screen-nav a{
+    display: block;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: black;
+    padding: 1%;
+    background-color: rgb(240,240,240);
+}
+
+.small-screen-nav #contact-link{
+    border-style: none;
+    border-color: black;
+    border-width: 3px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .small-screen-nav{
+        visibility: hidden;
+    }
+    
+}
+
+#three-bars:hover ~ .small-screen-nav{
+    visibility: visible;
+}
+
+.small-screen-nav:hover ~ #three-bars{
+    cursor:pointer;
+    -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
