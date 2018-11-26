@@ -1,0 +1,56 @@
+#first-background{
+    position: fixed;
+
+}
+
+.container{
+    margin: 50px;
+}
+
+#videoElement{
+    top: 50px;
+}
+
+#main-title{
+    left: -8px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 150px;
+    text-align: center; 
+    font-family: sans-serif;
+}
+
+#behinder{
+    opacity: 0;
+    height: 200px;
+    position:fixed;
+    left: -7px;
+}
+
+#main-title h2{
+    margin: 3%;
+    margin-bottom: 1%;
+    font-size: 350%;
+    
+}
+#main-title p{
+    margin-top: 5px;
+    font-size: 20px;
+    color: black;
+}
+
+#profile-shot{
+    height: 300px;
+    width: 300px;
+    border-radius: 700px;
+    size: 200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+#profile-photo{
+    width: 100%;
+    height: 100%;
+    border-radius: 400px;
+}

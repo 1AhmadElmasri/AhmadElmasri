@@ -1,0 +1,88 @@
+
+
+#blog-posts { /* Masonry container */
+    position: relative;
+    margin: auto;
+    top: 300px;
+    column-count: 3;
+    column-gap: 0.001em;
+    left: 2%;
+    width: 80%;
+}
+
+#post { /* Masonry bricks or child elements */
+    border-radius: 5px;
+    position: relative;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    background-color:rgb(245, 245, 245);
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 80%;
+}
+#post-image img:hover{
+    cursor: pointer;
+}
+#post-image img{
+    position: relative;
+    margin-top: 5%;
+    width: 80%;
+    overflow: hidden;
+}
+
+#post-synopsis{
+    width: 80%;
+    height: 74%;
+    position: absolute;
+    top: 4%;
+    left: 10%;
+    background-color: rgb(225, 225, 225,0.5);
+    opacity: 0;
+    transition-duration: 1s;
+}
+
+#post-synopsis p{
+    margin: 10%;
+    font-family: sans-serif;
+    position: relative;
+    top: 20%;
+}
+
+#post-title{
+    font-family: sans-serif; 
+    margin-bottom: 5px;
+}
+
+#post-date{
+    color: grey;
+    margin-top: 2px;
+}
+
+#post-synopsis:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+  
+  /* Masonry on medium-sized screens */
+  @media only screen and (max-width: 1023px) and (min-width: 768px) {
+    #post{
+    }
+    #blog-posts{
+        column-gap: 1em;
+    }
+    #post-synopsis{
+        visibility: hidden;
+    }
+  }
+  
+  /* Masonry on small screens */
+  @media only screen and (max-width: 767px) and (min-width: 540px) {
+    #blog-posts {
+      column-count: 2;
+    }
+    #post-synopsis{
+        visibility: hidden;
+    }
+  }
